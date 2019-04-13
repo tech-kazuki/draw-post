@@ -11,9 +11,14 @@
       <div class="menuicon" id="color555555" style="background-color:#555555"></div>
       <div class="menuicon" id="alpha10" style="background-color:rgba(255,72,1, 1.0)">10</div>
   </div>
-    <%= form_with model: @picture do |f| %>
-        <%= f.text_field :title %>
-        <%= f.hidden_field :image, value: '' %>
+    <%= form_with model: Picture.new, local: true, id: "picture_form" do |f| %>
+      <div class="form_field">
+        <%= f.text_field :title, placeholder: "タイトル", class: "form_title" %>
+      </div>
+      <div class="form_field">
+        <%= f.text_area :detail, placeholder: "説明を書いてね", class: "form_detail"%>
+      </div>
+        <%= f.text_field :image, type: 'hidden', value: '' %>
+        <%= f.submit '保存', class: "submit_btn"%>
     <% end %>
-  <span id="save-button">保存</span>
 </div>

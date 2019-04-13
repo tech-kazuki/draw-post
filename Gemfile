@@ -67,4 +67,5 @@ gem 'mini_magick'
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'sass'
-gem "jquery-rails"
+gem 'jquery-rails'
+gem 'kaminari'
