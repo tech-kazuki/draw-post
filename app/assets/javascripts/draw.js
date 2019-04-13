@@ -79,7 +79,12 @@ $(document).on('turbolinks:load', function() {
   function drawEnd() {
       mouseX = "";
       mouseY = "";
-  }
+      let imageUrl = canvas.toDataURL();
+      let input = document.getElementById('picture_image');
+      console.log(input);
+      input.value = imageUrl;
+      console.log(input.value);
+  };
 
   //メニューのアイコン関係
   var menuIcon = document.getElementsByClassName("menuicon");
