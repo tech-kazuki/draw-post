@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DrawPost</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <form>
+        <input type="text" name="search" placeholder="  検索する" class="header_search">
+      </form>
+      <h1>Pick-Space</h1>
+      <div class="header_right">
+        <div id="user_name" class="header_link">Name</div>
+          <div id="my_config_box" class="my_config_box">
+            <div class="my_config">ログアウト</div>
+          </div>
+        <div class="header_link">新規登録</div>
+        <div class="header_link">ログイン</div>
+        <%= link_to '新規投稿', new_picture_path %>
+      </div>
+    </header>
+    <%= yield %>
+  </body>
+</html>

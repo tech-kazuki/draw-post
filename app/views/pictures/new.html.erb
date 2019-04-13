@@ -1,0 +1,19 @@
+<div class="new_picture">
+  <div class="draw-area_box">
+    <canvas id="draw-area" width="700" height="500"></canvas>
+  </div>
+  <div id="canvasmenu">
+      <div class="menuicon" id="clear">×</div>
+      <div class="menuicon" id="colorf5f5f5">消</div>
+      <div class="menuicon" id="size21">21</div>
+      <div class="menuicon" id="size3">3</div>
+      <div class="menuicon" id="color00e676" style="background-color:#00e676"></div>
+      <div class="menuicon" id="color555555" style="background-color:#555555"></div>
+      <div class="menuicon" id="alpha10" style="background-color:rgba(255,72,1, 1.0)">10</div>
+  </div>
+    <%= form_with model: @picture do |f| %>
+        <%= f.text_field :title %>
+        <%= f.hidden_field :image, value: '' %>
+    <% end %>
+  <span id="save-button">保存</span>
+</div>
