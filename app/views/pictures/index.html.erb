@@ -1,4 +1,11 @@
 <%= render 'side_bar' %>
-<div class="contents">
-  <%= render @pictures %>
+<div class="right_box">
+<div class="my-class">
+  <div class="single-item">
+    <%= render partial: "slick_picture", collection: @pictures.order('created_at DESC').limit(9) %>
+  </div>
+  </div>
+  <div class="contents">
+    <%= render @pictures %>
+  </div>
 </div>

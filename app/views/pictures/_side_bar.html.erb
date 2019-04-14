@@ -1,12 +1,15 @@
 <div class="side_contents">
   <div class="side_contents__user">
-    <img src="" class="side_contents__user__image">
-    <div class="side_contents___user__name">Name</div>
+  <% unless user_signed_in? %>
+    <div class="side_contents__user__box" style="background-image: url(https://britz.mcmaster.ca/images/nouserimage.gif/image)"></div>
+    <div class="side_contents__user__name">UserNname</div>
+  <% end %>
+  <% if user_signed_in? %>
+    <div class="side_contents__user__box" style="background-image: url(<%= current_user.avatar %>)"></div>
+    <div class="side_contents__user__name"><%= current_user.nickname %></div>
+  <% end %>
   </div>
   <div class="side_contents__picks">
-    <div class="side_contents__picks__pick">
-      <div class="user_name"></div>
-      <div class="user_pick"></div>
-    </div>
+    <%= render partial: "user_picture", collection: current_user.pictures if user_signed_in?%>
   </div>
 </div>

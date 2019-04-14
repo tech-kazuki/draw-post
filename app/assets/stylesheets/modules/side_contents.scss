@@ -4,6 +4,39 @@
   box-shadow: 0 0 10px #d0d0d0;
   position: fixed;
   left: 0;
-  overflow: scroll;
   background-color: white;
+  padding-top: 40px;
+  z-index: 1;
+  &__user {
+    width: 230px;
+    height: 170px;
+    border-radius: 10px;
+    box-shadow: -1px 0 5px #7f7f7f;
+    text-align: center;
+    position: relative;
+    padding-top: 30px;
+    &__box {
+      height: 84px;
+      width: 84px;
+      margin: 0 auto;
+      border-radius: 5px 5px 30px 5px;
+    }
+    &__name {
+      color: gray;
+      font-size: 26px;
+      padding-top: 5px;
+    }
+  }
+  &__picks {
+    overflow: scroll;
+    height: calc(100vh - 210px);
+    padding-top: 5px;
+    .user_picture {
+      height: 160px;
+      margin: 2px;
+      padding-top: 9px;
+      text-align: center;
+      background-color: #dfdfdf;
+    }
+  }
 }

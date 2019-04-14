@@ -1,9 +1,14 @@
 <a class="content_over_link" href="">
-<div class="content">
-  <div class="content__image">
-    <img src="<%= picture.image %>" alt="<%= picture.title %>" width="340px" height="140px" style="">
+  <div class="content">
+    <div class="content__image">
+      <img src="<%= picture.image %>" alt="<%= picture.title %>" width="330px" height="210px">
+    </div>
+    <hr width="300" size="1" color="#fff">
+    <div class="content__title"><%= picture.title %></div>
+    <div class="content__detail"><%= picture.detail %></div>
+    <div class="content__user">
+      <div class="content__user__avatar" style="background-image: url(<%= picture.user.avatar %>)"></div>
+      <div class="content__user__name"><%= picture.user.nickname %></div>
+    </div>
   </div>
-  <div class="content__title"><%= picture.title %></div>
-  <hr width="300" size="1" color="#b0b0b0">
-</div>
 </a>

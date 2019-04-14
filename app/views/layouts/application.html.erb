@@ -6,7 +6,9 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </head>
 
   <body>
@@ -15,16 +17,21 @@
         <input type="text" name="search" placeholder="  検索する" class="header__search">
       </form>
       <%= link_to root_path, {class: "header__link"} do %>
-        <h1>Pick-Space</h1>
+        <h1>Draw-post</h1>
       <% end %>
       <div class="header__right">
-        <div id="user_name" class="header__right__user">Name</div>
+        <div id="user_name" class="header__right__user"><%= current_user.nickname if user_signed_in?%></div>
         <%= link_to '新規登録', new_user_registration_path, {class: "header__right__link"} unless user_signed_in? %>
         <%= link_to 'ログイン', new_user_session_path, {class: "header__right__link"} unless user_signed_in? %>
         <%= link_to '新規投稿', new_picture_path, {class: "header__right__link"} if user_signed_in? %>
       </div>
       <div id="my_config_box" class="my_config_box">
-        <%= link_to 'ログアウト', destroy_user_session_path, {class: "my_config"} %>
+        <div class="my_config_link">
+          <%= link_to 'マイページ', destroy_user_session_path, {method: :delete, class: "my_config"} %>
+        </div>
+        <div class="my_config_link">
+          <%= link_to 'ログアウト', destroy_user_session_path, {method: :delete, class: "my_config"} %>
+        </div>
       </div>
     </header>
     <%= yield %>
