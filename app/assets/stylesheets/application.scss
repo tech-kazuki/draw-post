@@ -1,7 +1,21 @@
+
+@font-face {
+  font-family: 'しろくま';
+  src: font-url('001Shirokuma-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 @import 'config/reset';
 @import 'config/header';
 @import 'modules/pictures';
 @import 'modules/pictures_index';
 @import 'modules/side_contents';
 @import 'modules/new_picture';
+@import 'modules/create_picture';
 @import 'swiper/swiper.min.scss';
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f5deb3;
+}

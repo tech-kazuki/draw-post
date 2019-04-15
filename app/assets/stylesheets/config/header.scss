@@ -3,7 +3,7 @@
   justify-content: space-between;
   height: 46px;
   width: 100vw;
-  background-color: black;
+  background-color: #6c3524;
   color: white;
   line-height: 46px;
   box-shadow: 0 0 10px #606060;
@@ -13,9 +13,10 @@
   &__link {
     text-decoration: none;
     h1 {
+      font-size: 30px;
       color: #fff;
       position: absolute;
-      left: 48%;
+      left: 42%;
     }
   }
   &__right {
@@ -36,8 +37,8 @@
   display: none;
   width: 100px;
   position: fixed;
-  right: 88px;
-  top: 50px;
+  right: 125px;
+  top: 46px;
   z-index: 10;
   background-color: #fff;
   box-shadow: 0 0 8px gray;

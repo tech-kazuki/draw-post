@@ -1,14 +1,72 @@
 .draw-area_box {
   margin: 0 auto;
   width: 700px;
+  display: flex;
+  cursor: crosshair;
   #draw-area {
     background-color: #fff;
   }
 }
 
 .new_picture {
-  background-color: aquamarine;
-  padding-top: 70px;
-  width: 50vw;
+  background-color: #f5deb3;
+  padding: 70px 0 40px;
+  width: 100vw;
   margin: 0 auto;
+}
+
+#canvasmenu_color {
+  margin-left: 5px;
+  background-color: #f5deb3;
+}
+
+#canvasmenu_config {
+  line-height: 27px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #f5deb3;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.menuicon {
+  margin: 2px;
+  border: 2px solid;
+  width: 50px;
+  height: 27px;
+  border-color: #dcdcdc #808080 #808080 #dcdcdc;
+  border-radius: 5px;
+  cursor: default;
+}
+
+.under {
+  width: 27px;
+  height: 27px;
+  border: 2px solid;
+  border-color: #dcdcdc #808080 #808080 #dcdcdc;
+  border-radius: 5px;
+  cursor: default;
+}
+
+#picture_form {
+  width: 700px;
+  margin: 0 auto;
+  .form_title {
+    font-size: 22px;
+    width: 100%;
+    margin: 7px 0;
+    padding: 0 5px;
+  }
+  .form_detail {
+    width: 100%;
+    height: 100px;
+    padding: 5px 5px;
+    font-size: 20px;
+  }
+  .submit_btn {
+    width: 100%;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 30px;
+  }
 }

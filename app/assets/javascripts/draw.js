@@ -1,5 +1,11 @@
 $(document).on('turbolinks:load', function() {
-  //HTML上の canvas タグを取得
+
+    $('.menuicon').on('mouseover', function(){
+        $(this).css('opacity', '0.7');
+    }).on('mouseout', function(){
+        $(this).css('opacity', '1.0');
+    });
+
   var canvas = document.getElementById('draw-area');
   if (canvas) {
     //レスポンシブ対応 画面サイズでキャンバスサイズを調整します
@@ -8,28 +14,22 @@ $(document).on('turbolinks:load', function() {
         canvas.height = 500 * screen.width / 860;
     }
 
-    //キャンバスの背景カラーを決定。 fillRectは長方形に塗るメソッド
-    var ctx = canvas.getContext('2d');
-    ctx.beginPath();
-    ctx.fillStyle = "#fff";
-    ctx.fillRect(0, 0, 700, 500);
-
-    //初期値（サイズ、色、アルファ値）の決定
     var defosize = 7;
     var defocolor = "#555555";
     var defoalpha = 1.0;
-
-    //マウス継続値の初期値、ここがポイント
     var mouseX = "";
     var mouseY = "";
 
-    //各イベントに紐づけ
+    var ctx = canvas.getContext('2d');
+    ctx.beginPath();
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, 700, 500);
+
     canvas.addEventListener('mousemove', onMove, false);
     canvas.addEventListener('mousedown', onClick, false);
     canvas.addEventListener('mouseup', drawEnd, false);
     canvas.addEventListener('mouseout', drawEnd, false);
 
-    //マウス動いていて、かつ左クリック時に発火。
     function onMove(e) {
         if (e.buttons === 1 || e.witch === 1) {
             var rect = e.target.getBoundingClientRect();
@@ -40,7 +40,6 @@ $(document).on('turbolinks:load', function() {
         };
     };
 
-    //マウスが左クリックされると発火。
     function onClick(e) {
         if (e.button === 0) {
             var rect = e.target.getBoundingClientRect();
@@ -51,7 +50,6 @@ $(document).on('turbolinks:load', function() {
         }
     };
 
-    //渡されたマウス位置を元に直線を描く関数
     function draw(X, Y) {
         ctx.beginPath();
         ctx.globalAlpha = defoalpha;
@@ -97,21 +95,25 @@ $(document).on('turbolinks:load', function() {
         //id 値によって場合分け
         var thisId = this.id;
         if (thisId.indexOf("size") + 1) {
-            defosize = ~~this.id.slice(4, this.id.length);
+            defosize = this.id.slice(4);
         }
         if (thisId.indexOf("color") + 1) {
-            defocolor = "#" + this.id.slice(5, this.id.length);
+            defocolor = "#" + this.id.slice(5);
         }
         if (thisId.indexOf("alpha") + 1) {
-            defoalpha = (~~this.id.slice(5, this.id.length)) / 10;
+            defoalpha = (this.id.slice(5)) / 10;
+        }
+        if (thisId.indexOf("fill") + 1) {
+            ctx.fillStyle = defocolor;
+            ctx.fillRect(0, 0, 700, 500);
         }
         if (thisId.indexOf("clear") + 1) {
             //全消しボタン、OKされた場合は fillRect 長方形で覆います
             if (confirm("すべて消去しますか？")) {
                 ctx.beginPath();
-                ctx.fillStyle = "#f5f5f5";
+                ctx.fillStyle = "#fff";
                 ctx.globalAlpha = 1.0;
-                ctx.fillRect(0, 0, 700, 400);
+                ctx.fillRect(0, 0, 700, 500);
             }
         }
     }

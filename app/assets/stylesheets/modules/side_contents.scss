@@ -31,10 +31,11 @@
     overflow: scroll;
     height: calc(100vh - 210px);
     padding-top: 5px;
+    text-align: center;
     .user_picture {
-      height: 160px;
-      margin: 2px;
-      padding-top: 9px;
+      height: 180px;
+      margin: 8px 2px;
+      padding-top: 5px;
       text-align: center;
       background-color: #dfdfdf;
     }
