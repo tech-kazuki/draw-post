@@ -1,6 +1,7 @@
 @import 'config/reset';
 @import 'config/header';
-@import 'modules/contents';
+@import 'modules/pictures';
+@import 'modules/pictures_index';
 @import 'modules/side_contents';
 @import 'modules/new_picture';
-@import 'slick/slick-theme.scss';
+@import 'swiper/swiper.min.scss';

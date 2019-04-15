@@ -9,12 +9,5 @@ $(document).on('turbolinks:load', function(){
     $(this).css('background-color', '#fff');
   });
 
-  $(function(){
-    $('.single-item').slick({
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      autoplay: true,
-      autoplaySpeed: 1500,
-    });
-  });
+  
 });

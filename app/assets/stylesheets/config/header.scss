@@ -10,15 +10,6 @@
   z-index: 5;
   position: fixed;
   top: 0;
-  &__search {
-    width: 380px;
-    height: 34px;
-    border: 2px solid #505050;
-    border-radius: 30px;
-    color: #d0d0d0;
-    background-color: #303030;
-    margin-left: 20px;
-  }
   &__link {
     text-decoration: none;
     h1 {

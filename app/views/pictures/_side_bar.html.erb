@@ -1,7 +1,7 @@
 <div class="side_contents">
   <div class="side_contents__user">
   <% unless user_signed_in? %>
-    <div class="side_contents__user__box" style="background-image: url(https://britz.mcmaster.ca/images/nouserimage.gif/image)"></div>
+    <div class="side_contents__user__box" style="background-image: url(<%= asset_url("image.png") %>)"></div>
     <div class="side_contents__user__name">UserNname</div>
   <% end %>
   <% if user_signed_in? %>
