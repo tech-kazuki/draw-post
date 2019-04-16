@@ -1,18 +1,13 @@
 $(document).on('turbolinks:load', function() {
 
     $('.menuicon').on('mouseover', function(){
-        $(this).css('opacity', '0.7');
+        $(this).css('opacity', '0.8');
     }).on('mouseout', function(){
         $(this).css('opacity', '1.0');
     });
 
   var canvas = document.getElementById('draw-area');
   if (canvas) {
-    //レスポンシブ対応 画面サイズでキャンバスサイズを調整します
-    if (screen.width < 860) {
-        canvas.width = 700 * screen.width / 860;
-        canvas.height = 500 * screen.width / 860;
-    }
 
     var defosize = 7;
     var defocolor = "#555555";

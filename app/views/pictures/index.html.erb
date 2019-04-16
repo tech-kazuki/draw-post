@@ -1,13 +1,15 @@
-<%= render 'side_bar' %>
-<div class="right_box">
+<%= render 'side_content' %>
+<div class="right_content">
+<div class="swiper_title">＜最新のみんなの投稿＞</div>
 <div class="swiper-container">
   <div class="swiper-wrapper">
-    <%= render partial: "swiper_picture", collection: @pictures.order('created_at DESC').limit(9) %>
+    <%= render partial: "swiper_picture", collection: @swiper_pictures %>
   </div>
   <div class="swiper-pagination"></div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>
+<div class="swiper_title">＜投稿一覧＞</div>
   <div class="contents">
     <%= render @pictures %>
   </div>

@@ -9,7 +9,7 @@
 }
 
 .new_picture {
-  background-color: #f5deb3;
+  background-color: $bg-color;
   padding: 70px 0 40px;
   width: 100vw;
   margin: 0 auto;
@@ -17,16 +17,31 @@
 
 #canvasmenu_color {
   margin-left: 5px;
-  background-color: #f5deb3;
+  background-color: $bg-color;
 }
 
 #canvasmenu_config {
   line-height: 27px;
   display: flex;
   justify-content: space-around;
-  background-color: #f5deb3;
+  background-color: $bg-color;
   width: 700px;
   margin: 0 auto;
+  text-align: center;
+  .under {
+    width: 27px;
+    height: 27px;
+    border: 2px solid;
+    border-color: #dcdcdc #808080 #808080 #dcdcdc;
+    border-radius: 5px;
+    cursor: default;
+    &--left {
+      width: 70px;
+    }
+    &--midle {
+      width: 35px;
+    }
+  }
 }
 
 .menuicon {
@@ -39,22 +54,13 @@
   cursor: default;
 }
 
-.under {
-  width: 27px;
-  height: 27px;
-  border: 2px solid;
-  border-color: #dcdcdc #808080 #808080 #dcdcdc;
-  border-radius: 5px;
-  cursor: default;
-}
-
 #picture_form {
   width: 700px;
   margin: 0 auto;
   .form_title {
     font-size: 22px;
     width: 100%;
-    margin: 7px 0;
+    margin: 10px 0;
     padding: 0 5px;
   }
   .form_detail {
@@ -62,6 +68,7 @@
     height: 100px;
     padding: 5px 5px;
     font-size: 20px;
+    margin-bottom: 5px;
   }
   .submit_btn {
     width: 100%;

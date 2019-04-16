@@ -6,13 +6,15 @@
   font-style: normal;
 }
 @import 'config/reset';
+@import 'config/colors';
+@import 'config/mixin';
 @import 'config/header';
-@import 'modules/pictures';
-@import 'modules/pictures_index';
-@import 'modules/side_contents';
-@import 'modules/new_picture';
-@import 'modules/create_picture';
-@import 'swiper/swiper.min.scss';
+@import 'modules/pictures/index';
+@import 'modules/pictures/new';
+@import 'modules/pictures/create';
+@import 'modules/pictures/show';
+@import 'modules/devise';
+@import 'modules/swiper/swiper.min.scss';
 
 body {
   height: 100vh;

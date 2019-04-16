@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_14_033442) do
+ActiveRecord::Schema.define(version: 2019_04_15_105110) do
 
   create_table "pictures", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
-    t.text "image"
+    t.text "image", limit: 4294967295
     t.text "detail"
     t.bigint "user_id"
     t.datetime "created_at", null: false

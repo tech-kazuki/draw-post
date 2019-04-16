@@ -1,0 +1,126 @@
+.side_content {
+  width: 230px;
+  height: 100vh;
+  @include shadow;
+  position: fixed;
+  left: 0;
+  background-color: white;
+  padding-top: 40px;
+  z-index: 1;
+  &__user {
+    width: 230px;
+    height: 170px;
+    border-radius: 2px;
+    @include shadow;
+    text-align: center;
+    padding-top: 30px;
+    &__box {
+      height: 84px;
+      width: 84px;
+      margin: 0 auto;
+      border-radius: 2px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &__name {
+      color: gray;
+      font-size: 26px;
+      padding-top: 5px;
+      font-family: serif;
+    }
+  }
+  &__picks {
+    overflow: scroll;
+    height: calc(100vh - 210px);
+    padding-top: 5px;
+    text-align: center;
+    p {
+      font-family: serif;
+    }
+    .user_picture {
+      height: 180px;
+      margin: 8px 2px;
+      padding-top: 5px;
+      text-align: center;
+      background-color: #dfdfdf;
+      &__title {
+        font-family: serif;
+      }
+    }
+  }
+}
+
+.right_content {
+  background-color: $bg-color;
+  padding-top: 40px;
+  width: calc(100vw - 230px);
+  margin-left: 230px;
+  .swiper_title {
+    text-align: center;
+    font-size: 40px;
+    padding: 20px 0 10px 0;
+  }
+  .swiper-container {
+    width: calc(100vw - 250px);
+  }
+  .contents {
+    width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    .content_over_link {
+      @include link;
+      color: black;
+      margin: 10px;
+      border-radius: 2px;
+      background-color: white;
+      .content {
+        width: 340px;
+        height: 390px;
+        background-color: #f5f5f5;
+        margin: 10px 10px;
+        position: relative;
+        &__image {
+          padding: 5px;
+        }
+        &__title {
+          margin: 10px 20px 0 20px;
+          min-height: 40px;
+          font-size: 18px;
+          line-height: 2rem;
+          font-weight: bold;
+        }
+        &__detail {
+          margin: 0 28px;
+          font-size: 14px;
+          height: 53px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          line-height: 1.2rem;
+        }
+        &__user {
+          display: flex;
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+          &__avatar {
+            margin-right: 5px;
+            border-radius: 3px;
+            width: 20px;
+            height: 20px;
+            background-size: 21px 21px;
+          }
+          &__name {
+            font-size: 14px;
+            line-height: 20px;
+            font-family: serif;
+          }
+        }
+        hr {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

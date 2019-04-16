@@ -11,7 +11,7 @@
   <body>
     <header class="header">
       <%= link_to root_path, {class: "header__link"} do %>
-        <h1>Draw-post</h1>
+        <h1>Draw-Post</h1>
       <% end %>
       <div class="header__right">
         <div id="user_name" class="header__right__user"><%= current_user.nickname if user_signed_in?%></div>
@@ -21,7 +21,7 @@
       </div>
       <div id="my_config_box" class="my_config_box">
         <div class="my_config_link">
-          <%= link_to 'マイページ', destroy_user_session_path, {method: :delete, class: "my_config"} %>
+          <%= link_to 'マイページ', user_path(current_user), {class: "my_config"}  if user_signed_in?%>
         </div>
         <div class="my_config_link">
           <%= link_to 'ログアウト', destroy_user_session_path, {method: :delete, class: "my_config"} %>

@@ -1,6 +1,11 @@
 class PicturesController < ApplicationController
   def index
     @pictures = Picture.all
+    @swiper_pictures = Picture.order('created_at DESC').limit(9)
+  end
+
+  def show
+    @picture = Picture.find(params[:id])
   end
 
   def new

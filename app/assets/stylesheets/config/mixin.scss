@@ -1,0 +1,7 @@
+@mixin shadow {
+  box-shadow: 0 0 5px gray;
+}
+
+@mixin link {
+  text-decoration: none;
+}
