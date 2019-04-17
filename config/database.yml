@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: draw-post_production
   username: draw-post
   password: <%= ENV['DRAW-POST_DATABASE_PASSWORD'] %>
