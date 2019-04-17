@@ -74,9 +74,7 @@ $(document).on('turbolinks:load', function() {
         mouseY = "";
         let imageUrl = canvas.toDataURL();
         let input = document.getElementById('picture_image');
-        console.log(input);
         input.value = imageUrl;
-        console.log(input.value);
     };
 
     //メニューのアイコン関係
