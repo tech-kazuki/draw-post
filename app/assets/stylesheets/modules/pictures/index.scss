@@ -6,7 +6,7 @@
   left: 0;
   background-color: white;
   padding-top: 40px;
-  z-index: 1;
+  z-index: 5;
   &__user {
     width: 230px;
     height: 170px;
@@ -55,6 +55,7 @@
   background-color: $bg-color;
   padding-top: 40px;
   width: calc(100vw - 230px);
+  min-width: 1140px;
   margin-left: 230px;
   .swiper_title {
     text-align: center;
@@ -62,10 +63,10 @@
     padding: 20px 0 10px 0;
   }
   .swiper-container {
-    width: calc(100vw - 250px);
   }
   .contents {
     width: 1140px;
+    background-color: $bg-color;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
