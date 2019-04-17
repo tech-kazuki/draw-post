@@ -1,4 +1,9 @@
 .result {
   @include link;
-  font-size: 80px;
+  display: block;
+  width: 900px;
+  font-size: 50px;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 60px;
 }
