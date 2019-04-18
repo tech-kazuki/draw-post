@@ -43,5 +43,12 @@
       padding: 10px 10px;
       font-family: serif;
     }
+    .delete_link {
+      text-decoration: none;
+      color: gray;
+      display: block;
+      padding-top: 20px;
+      text-align: center;
+    }
   }
 }

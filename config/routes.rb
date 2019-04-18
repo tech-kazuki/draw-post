@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users, only: [:show]
-  resources :pictures, only: [:index, :show, :new, :create, :delete]
+  resources :pictures, only: [:index, :show, :new, :create, :destroy]
 end

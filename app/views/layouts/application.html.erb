@@ -10,7 +10,8 @@
 
   <body>
     <header class="header">
-      <%= link_to root_path, {class: "header__link"} do %>
+      <%= link_to 'ホーム', root_path, {class: "header__link"}%>
+      <%= link_to root_path, {class: "header__link--title"} do %>
         <h1>Draw-Post</h1>
       <% end %>
       <div class="header__right">

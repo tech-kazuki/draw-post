@@ -5,3 +5,12 @@
 @mixin link {
   text-decoration: none;
 }
+
+@mixin header_link {
+  text-decoration: none;
+  color: $white;
+  margin: 5px 10px;
+  border: 2px solid;
+  border-radius: 5px;
+  line-height: 38px;
+}

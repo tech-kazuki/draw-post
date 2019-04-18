@@ -11,12 +11,15 @@
   position: fixed;
   top: 0;
   &__link {
-    @include link;
-    h1 {
-      font-size: 30px;
-      color: $white;
-      position: absolute;
-      left: 42%;
+    @include header_link;
+    &--title {
+      text-decoration: none;
+      border: none;
+      h1 {
+        font-size: 30px;
+        color: $white;
+        padding-left: 80px;
+      }
     }
   }
   &__right {
@@ -26,12 +29,7 @@
       margin-right: 18px;
     }
     &__link {
-      @include link;
-      color: $white;
-      margin: 5px 18px 5px 0;
-      border: 2px solid;
-      border-radius: 5px;
-      line-height: 38px;
+      @include header_link;
     }
   }
 }
