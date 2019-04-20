@@ -12,7 +12,7 @@
     <header class="header">
       <%= link_to 'ホーム', root_path, {class: "header__link"}%>
       <%= link_to root_path, {class: "header__link--title"} do %>
-        <h1>Draw-Post</h1>
+        <h1>画伯選手権</h1>
       <% end %>
       <div class="header__right">
         <div id="user_name" class="header__right__user"><%= current_user.nickname if user_signed_in?%></div>
