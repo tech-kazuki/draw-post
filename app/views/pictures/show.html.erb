@@ -9,5 +9,9 @@
       <div class="show__user__time"><%= @picture.created_at.strftime("%Y-%m") %></div>
     </div>
     <div class="show__detail"><%= @picture.detail %></div>
+    <div class="twitter">
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
   </div>
 </div>
