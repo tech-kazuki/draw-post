@@ -1,9 +1,14 @@
-.result {
-  @include link;
+.conplete {
   display: block;
   font-size: 50px;
-  text-decoration: none;
   text-align: center;
   padding-top: 60px;
-  color: white;
+  color: brown;
+}
+.result {
+  display: block;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 10px;
+  color: brown;
 }
