@@ -21,31 +21,31 @@
       <div class="menuicon" id="colorff7f00" style="background-color:#ff7f00"></div>
     </div>
   </div>
-    <div id="canvasmenu_config">
-        <div class="menuicon under--left" id="clear" style="background-color:#ffffff">リセット</div>
-        <div class="menuicon under--left" id="colorffffff" style="background-color:#ffffff">消しゴム</div>
-        <div class="menuicon under--left" id="fill" style="background-color:#ffffff">塗り潰し</div>
-        <pre> 太さ</pre>
-        <div class="menuicon under--midle" id="size26" style="background-color:#ffffff">26</div>
-        <div class="menuicon under--midle" id="size20" style="background-color:#ffffff">20</div>
-        <div class="menuicon under--midle" id="size14" style="background-color:#ffffff">14</div>
-        <div class="menuicon under--midle" id="size9" style="background-color:#ffffff">9</div>
-        <div class="menuicon under--midle" id="size5" style="background-color:#ffffff">5</div>
-        <div class="menuicon under--midle" id="size2" style="background-color:#ffffff">2</div>
-        <pre> 透明度</pre>
-        <div class="menuicon under" id="alpha10" style="background-color:rgba(0,0,0,1.0)"></div>
-        <div class="menuicon under" id="alpha7" style="background-color:rgba(0,0,0,0.7)"></div>
-        <div class="menuicon under" id="alpha5" style="background-color:rgba(0,0,0,0.5)"></div>
-        <div class="menuicon under" id="alpha2" style="background-color:rgba(0,0,0,0.2)"></div>
+  <div id="canvasmenu_config">
+      <div class="menuicon under--left" id="clear" style="background-color:#ffffff">リセット</div>
+      <div class="menuicon under--left" id="colorffffff" style="background-color:#ffffff">消しゴム</div>
+      <div class="menuicon under--left" id="fill" style="background-color:#ffffff">塗り潰し</div>
+      <pre> 太さ</pre>
+      <div class="menuicon under--midle" id="size26" style="background-color:#ffffff">26</div>
+      <div class="menuicon under--midle" id="size20" style="background-color:#ffffff">20</div>
+      <div class="menuicon under--midle" id="size14" style="background-color:#ffffff">14</div>
+      <div class="menuicon under--midle" id="size9" style="background-color:#ffffff">9</div>
+      <div class="menuicon under--midle" id="size5" style="background-color:#ffffff">5</div>
+      <div class="menuicon under--midle" id="size2" style="background-color:#ffffff">2</div>
+      <pre> 透明度</pre>
+      <div class="menuicon under" id="alpha10" style="background-color:rgba(0,0,0,1.0)"></div>
+      <div class="menuicon under" id="alpha7" style="background-color:rgba(0,0,0,0.7)"></div>
+      <div class="menuicon under" id="alpha5" style="background-color:rgba(0,0,0,0.5)"></div>
+      <div class="menuicon under" id="alpha2" style="background-color:rgba(0,0,0,0.2)"></div>
+  </div>
+  <%= form_with model: Picture.new, local: true, id: "picture_form" do |f| %>
+    <div class="form_field">
+      <%= f.text_field :title, placeholder: "タイトル", class: "form_title" %>
     </div>
-    <%= form_with model: Picture.new, local: true, id: "picture_form" do |f| %>
-      <div class="form_field">
-        <%= f.text_field :title, placeholder: "タイトル", class: "form_title" %>
-      </div>
-      <div class="form_field">
-        <%= f.text_area :detail, placeholder: "説明を書いてね", class: "form_detail"%>
-      </div>
-        <%= f.text_field :image, type: 'hidden', value: '' %>
-        <%= f.submit 'お絵かき終了', class: "submit_btn"%>
-    <% end %>
+    <div class="form_field">
+      <%= f.text_area :detail, placeholder: "説明を書いてね", class: "form_detail"%>
+    </div>
+      <%= f.text_field :image, type: 'hidden', value: '' %>
+      <%= f.submit 'お絵かき終了', class: "submit_btn"%>
+  <% end %>
 </div>

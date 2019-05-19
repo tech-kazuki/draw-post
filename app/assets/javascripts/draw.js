@@ -74,7 +74,7 @@ $(document).on('turbolinks:load', function() {
     //メニューのアイコン関係
     var menuIcon = document.getElementsByClassName("menuicon");
     for (i = 0; i < menuIcon.length; i++) {
-        menuIcon[i].addEventListener("click", canvasMenu, false)
+        menuIcon[i].addEventListener("click", canvasMenu, false);
     }
 
     //メニューボタン管理
