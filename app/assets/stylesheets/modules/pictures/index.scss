@@ -1,13 +1,15 @@
 .right_content {
-  background-color: $bg-color;
-  padding-top: 50px;
+  padding-top: 48px;
   width: 100vw;
+  background-color: $Base;
   .main_title {
-    font-size: 60px;
+    font-size: 48px;
+    text-align: center;
+    color: #fff;
+    background-color: $Primary;
   }
   .contents {
-    width: 1140px;
-    background-color: $bg-color;
+    width: 90vw;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -18,44 +20,35 @@
       border-radius: 2px;
       background-color: white;
       .content {
-        width: 340px;
+        width: 350px;
         height: 390px;
-        background-color: #f5f5f5;
-        margin: 10px 10px;
         position: relative;
-        &__image {
-          padding: 5px;
-        }
-        &__title {
-          margin: 10px 20px 0 20px;
-          min-height: 40px;
-          font-size: 18px;
-          line-height: 2rem;
-          font-weight: bold;
-        }
-        &__detail {
-          margin: 0 28px;
-          font-size: 14px;
-          height: 53px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          line-height: 1.2rem;
-        }
-        &__user {
-          display: flex;
-          position: absolute;
-          right: 10px;
-          bottom: 10px;
-          &__avatar {
-            margin-right: 5px;
-            border-radius: 3px;
-            width: 20px;
-            height: 20px;
-            background-size: 21px 21px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+        &__btm {
+          background-color: #fff;
+          height: 136px;
+          &__title {
+            margin: 0 20px;
+            min-height: 40px;
+            font-size: 18px;
+            line-height: 2rem;
+            font-weight: bold;
           }
-          &__name {
+          &__detail {
+            margin: 0 28px 20px;
             font-size: 14px;
-            line-height: 20px;
+            height: 53px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.2rem;
+          }
+          &__user {
+            text-align: right;
+            padding-right: 20px;
+            &__name {
+              font-size: 14px;
+              line-height: 20px;
+            }
           }
         }
         hr {
@@ -64,4 +57,32 @@
       }
     }
   }
+}
+
+.floating_link {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 5;
+  .floating_btn {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: $Secondary;
+    text-align: center;
+    line-height: 160px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+    .paint_icon {
+      color: #000;
+      font-size: 3.5rem;
+    }
+  }
+}
+
+.floating_btn:hover {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.content:hover {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }

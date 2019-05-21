@@ -9,7 +9,7 @@
 }
 
 .new_picture {
-  background-color: $bg-color;
+  background-color: $Secondary;
   padding: 70px 0 40px;
   width: 100vw;
   min-width: 1000px;
@@ -18,14 +18,14 @@
 
 #canvasmenu_color {
   margin-left: 5px;
-  background-color: $bg-color;
+  background-color: $Secondary;
 }
 
 #canvasmenu_config {
   line-height: 27px;
   display: flex;
   justify-content: space-around;
-  background-color: $bg-color;
+  background-color: $Secondary;
   width: 700px;
   margin: 0 auto;
   text-align: center;

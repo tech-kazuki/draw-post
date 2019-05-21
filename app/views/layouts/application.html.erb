@@ -8,15 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <header class="header">
-      <%= link_to 'ホーム', root_path, {class: "header__link"}%>
-      <%= link_to root_path, {class: "header__link--title"} do %>
-        <h1>お絵かきアプリ</h1>
-      <% end %>
-      <div class="header__right">
-        <%= link_to 'お絵かきする', new_picture_path, {class: "header__right__link"} %>
-      </div>
-    </header>
+    <%= render 'layouts/header' %>
     <%= yield %>
   </body>
 </html>
