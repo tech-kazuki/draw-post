@@ -1,7 +1,7 @@
 .right_content {
   padding-top: 48px;
   width: 100vw;
-  background-color: $Base;
+  background-color: #fff;
   .main_title {
     font-size: 48px;
     text-align: center;
@@ -9,26 +9,33 @@
     background-color: $Primary;
   }
   .contents {
-    width: 90vw;
+    width: 93vw;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 150px;
     .content_over_link {
       @include link;
       color: black;
-      margin: 10px;
+      margin: 20px;
       border-radius: 2px;
       background-color: white;
       .content {
         width: 350px;
-        height: 390px;
+        height: 400px;
         position: relative;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+        box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.12), 0 2px 3px 1px rgba(0, 0, 0, 0.24);
+        &__top {
+          height: 240px;
+          background-position: center;
+          background-size: 100% auto;
+          box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.24) inset;
+        }
         &__btm {
           background-color: #fff;
           height: 136px;
           &__title {
-            margin: 0 20px;
+            margin: 10px 20px 0;
             min-height: 40px;
             font-size: 18px;
             line-height: 2rem;
@@ -80,9 +87,5 @@
 }
 
 .floating_btn:hover {
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-}
-
-.content:hover {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }

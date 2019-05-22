@@ -40,10 +40,14 @@
   </div>
   <%= form_with model: Picture.new, local: true, id: "picture_form" do |f| %>
     <div class="form_field">
-      <%= f.text_field :title, placeholder: "タイトル", class: "form_title" %>
+      <%= f.label :user_name, 'ニックネーム', class: "form_label"%>
+      <%= f.text_field :user_name, placeholder: "例）お絵かき太郎", class: "form_title" %>
+      <%= f.label :title, 'タイトル', class: "form_label"%>
+      <%= f.text_field :title, placeholder: "例）初めての作品", class: "form_title" %>
     </div>
     <div class="form_field">
-      <%= f.text_area :detail, placeholder: "説明を書いてね", class: "form_detail"%>
+      <%= f.label :detail, '説明文', class: "form_label"%>
+      <%= f.text_area :detail, placeholder: "例）真夏の太陽をイメージしました。", class: "form_detail"%>
     </div>
       <%= f.text_field :image, type: 'hidden', value: '' %>
       <%= f.submit 'お絵かき終了', class: "submit_btn"%>

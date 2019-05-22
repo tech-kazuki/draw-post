@@ -11,11 +11,15 @@ class PicturesController < ApplicationController
   end
 
   def create
-    Picture.create(picture_params)
+    if Picture.create(picture_params) == true
+      redirect_to root_path
+    else
+      redirect_to new_picture_path
+    end
   end
 
   private
   def picture_params
-    params.require(:picture).permit(:title, :image, :detail)
+    params.require(:picture).permit(:user_name, :title, :image, :detail)
   end
 end
