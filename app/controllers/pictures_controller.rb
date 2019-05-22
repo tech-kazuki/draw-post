@@ -1,7 +1,6 @@
 class PicturesController < ApplicationController
   def index
     @pictures = Picture.all
-    @swiper_pictures = Picture.order('created_at DESC').limit(9)
   end
 
   def show
@@ -12,16 +11,15 @@ class PicturesController < ApplicationController
   end
 
   def create
-    Picture.create(title: picture_params[:title], image: picture_params[:image], detail: picture_params[:detail], user_id: current_user.id)
-  end
-
-  def destroy
-    Picture.delete(params[:id])
-    redirect_to action: 'index'
+    if Picture.create(picture_params) == true
+      redirect_to root_path
+    else
+      redirect_to new_picture_path
+    end
   end
 
   private
   def picture_params
-    params.require(:picture).permit(:title, :image, :detail)
+    params.require(:picture).permit(:user_name, :title, :image, :detail)
   end
 end

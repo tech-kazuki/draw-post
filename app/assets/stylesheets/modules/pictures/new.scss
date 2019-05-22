@@ -9,23 +9,22 @@
 }
 
 .new_picture {
-  background-color: $bg-color;
+  background-color: $Primary_L;
   padding: 70px 0 40px;
   width: 100vw;
   min-width: 1000px;
+  min-height: 100vh;
   margin: 0 auto;
 }
 
 #canvasmenu_color {
   margin-left: 5px;
-  background-color: $bg-color;
 }
 
 #canvasmenu_config {
   line-height: 27px;
   display: flex;
   justify-content: space-around;
-  background-color: $bg-color;
   width: 700px;
   margin: 0 auto;
   text-align: center;
@@ -57,18 +56,22 @@
 
 #picture_form {
   width: 700px;
-  margin: 0 auto;
+  margin: 10px auto 0;
+  .form_label {
+    font-size: 18px;
+    color: #fff;
+  }
   .form_title {
-    font-size: 22px;
+    font-size: 18px;
     width: 100%;
-    margin: 10px 0;
+    margin-bottom: 10px;
     padding: 0 5px;
   }
   .form_detail {
     width: 100%;
     height: 100px;
     padding: 5px 5px;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 5px;
   }
   .submit_btn {
@@ -76,5 +79,7 @@
     border-radius: 10px;
     height: 50px;
     font-size: 30px;
+    background-color: $Secondary_L;
+    cursor: pointer;
   }
 }

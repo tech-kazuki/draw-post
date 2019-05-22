@@ -7,28 +7,8 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <header class="header">
-      <%= link_to 'ホーム', root_path, {class: "header__link"}%>
-      <%= link_to root_path, {class: "header__link--title"} do %>
-        <h1>画伯選手権</h1>
-      <% end %>
-      <div class="header__right">
-        <div id="user_name" class="header__right__user"><%= current_user.nickname if user_signed_in?%></div>
-        <%= link_to '新規登録', new_user_registration_path, {class: "header__right__link"} unless user_signed_in? %>
-        <%= link_to 'ログイン', new_user_session_path, {class: "header__right__link"} unless user_signed_in? %>
-        <%= link_to 'お絵かきする', new_picture_path, {class: "header__right__link"} if user_signed_in? %>
-      </div>
-      <div id="my_config_box" class="my_config_box">
-        <div class="my_config_link">
-          <%= link_to 'マイページ', user_path(current_user), {class: "my_config"}  if user_signed_in?%>
-        </div>
-        <div class="my_config_link">
-          <%= link_to 'ログアウト', destroy_user_session_path, {method: :delete, class: "my_config"} %>
-        </div>
-      </div>
-    </header>
+    <%= render 'layouts/header' %>
     <%= yield %>
   </body>
 </html>

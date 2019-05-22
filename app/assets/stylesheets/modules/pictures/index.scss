@@ -1,121 +1,61 @@
-.side_content {
-  width: 230px;
-  height: 100vh;
-  @include shadow;
-  position: fixed;
-  left: 0;
-  background-color: white;
-  padding-top: 40px;
-  z-index: 5;
-  &__user {
-    width: 230px;
-    height: 170px;
-    border-radius: 2px;
-    @include shadow;
-    text-align: center;
-    padding-top: 30px;
-    &__box {
-      height: 84px;
-      width: 84px;
-      margin: 0 auto;
-      border-radius: 2px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-    &__name {
-      color: gray;
-      font-size: 26px;
-      padding-top: 5px;
-      font-family: serif;
-    }
-  }
-  &__picks {
-    overflow: scroll;
-    height: calc(100vh - 210px);
-    padding-top: 5px;
-    text-align: center;
-    p {
-      font-family: serif;
-    }
-    .user_picture {
-      height: 180px;
-      margin: 8px 2px;
-      padding-top: 5px;
-      text-align: center;
-      background-color: #dfdfdf;
-      &__title {
-        font-family: serif;
-      }
-    }
-  }
-}
-
 .right_content {
-  background-color: $bg-color;
-  padding-top: 40px;
-  width: calc(100vw - 230px);
-  min-width: 1140px;
-  margin-left: 230px;
-  .swiper_title {
+  padding-top: 48px;
+  width: 100vw;
+  background-color: #fff;
+  .main_title {
+    font-size: 48px;
     text-align: center;
-    font-size: 40px;
-    padding: 20px 0 10px 0;
-  }
-  .swiper-container {
+    color: #fff;
+    background-color: $Primary;
   }
   .contents {
-    width: 1140px;
-    background-color: $bg-color;
+    width: 93vw;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 150px;
     .content_over_link {
       @include link;
       color: black;
-      margin: 10px;
+      margin: 20px;
       border-radius: 2px;
       background-color: white;
       .content {
-        width: 340px;
-        height: 390px;
-        background-color: #f5f5f5;
-        margin: 10px 10px;
+        width: 350px;
+        height: 400px;
         position: relative;
-        &__image {
-          padding: 5px;
+        box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.12), 0 2px 3px 1px rgba(0, 0, 0, 0.24);
+        &__top {
+          height: 240px;
+          background-position: center;
+          background-size: 100% auto;
+          box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.24) inset;
         }
-        &__title {
-          margin: 10px 20px 0 20px;
-          min-height: 40px;
-          font-size: 18px;
-          line-height: 2rem;
-          font-weight: bold;
-        }
-        &__detail {
-          margin: 0 28px;
-          font-size: 14px;
-          height: 53px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          line-height: 1.2rem;
-        }
-        &__user {
-          display: flex;
-          position: absolute;
-          right: 10px;
-          bottom: 10px;
-          &__avatar {
-            margin-right: 5px;
-            border-radius: 3px;
-            width: 20px;
-            height: 20px;
-            background-size: 21px 21px;
+        &__btm {
+          background-color: #fff;
+          height: 136px;
+          &__title {
+            margin: 10px 20px 0;
+            min-height: 40px;
+            font-size: 18px;
+            line-height: 2rem;
+            font-weight: bold;
           }
-          &__name {
+          &__detail {
+            margin: 0 28px 20px;
             font-size: 14px;
-            line-height: 20px;
-            font-family: serif;
+            height: 53px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.2rem;
+          }
+          &__user {
+            text-align: right;
+            padding-right: 20px;
+            &__name {
+              font-size: 14px;
+              line-height: 20px;
+            }
           }
         }
         hr {
@@ -124,4 +64,28 @@
       }
     }
   }
+}
+
+.floating_link {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 5;
+  .floating_btn {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: $Secondary;
+    text-align: center;
+    line-height: 160px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+    .paint_icon {
+      color: #000;
+      font-size: 3.5rem;
+    }
+  }
+}
+
+.floating_btn:hover {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }

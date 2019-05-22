@@ -67,11 +67,11 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pry-rails'
-gem 'devise'
 gem 'mini_magick'
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'sass'
 gem 'jquery-rails'
 gem 'kaminari'
-gem 'carrierwave'
+gem 'devise'
+gem 'font-awesome-sass', '~> 5.8.1'
